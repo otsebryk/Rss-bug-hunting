@@ -34,10 +34,12 @@ body {
 
 .gallery {
   display: flex;
-  flex-direction: column;
+  /* поставил row */
+  flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  gap: 0;
+  /* добавил промежуток между карточками*/
+  gap: 20px;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -54,14 +56,17 @@ body {
 }
 
 .card:hover {
-  transform: translateY(0);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  /* ховер меняется */
+  transform: translateY(-8px);
+  /* и тень стала сильнее чтобы было заметно */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
 }
 
 .card img {
   width: 100%;
   height: 200px;
-  object-fit: fill;
+  /* было fill, картинки растягивались и искажались, поставил cover */
+  object-fit: cover;
   display: block;
 }
 
